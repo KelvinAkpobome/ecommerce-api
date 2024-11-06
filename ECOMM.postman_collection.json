@@ -1,0 +1,842 @@
+{
+	"info": {
+		"_postman_id": "6e4958eb-b8f1-4bd8-8df9-ddff92dc9b45",
+		"name": "ECOMM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21632081"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Create Products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MzA5NTQwMTksImlzX2FkbWluIjp0cnVlLCJ1c2VyX2lkIjoyNH0.bliYkwUQ62X0i52gAlk4AJkGapwZ98ygXStM9M5Qnqc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"Name\": \"Product A\",\n  \"Price\": 10.00\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/admin/products",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Products",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"Name\": \"Product A\",\n  \"Price\": 10.00\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/admin/products",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"products"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 06 Nov 2024 05:07:21 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "86"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Product created successfully\",\n    \"response\": {\n        \"product_id\": 58\n    },\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Prod",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MzA5NTQwMTksImlzX2FkbWluIjp0cnVlLCJ1c2VyX2lkIjoyNH0.bliYkwUQ62X0i52gAlk4AJkGapwZ98ygXStM9M5Qnqc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"Name\": \"Product A\",\n  \"Price\": 10.00\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/admin/products/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"products",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Prod",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"Name\": \"Product A\",\n  \"Price\": 10.00\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/admin/products/4",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"products",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 06 Nov 2024 05:09:38 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "85"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Product updated successfully\",\n    \"response\": {\n        \"product_id\": 4\n    },\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MzA5NTQwMTksImlzX2FkbWluIjp0cnVlLCJ1c2VyX2lkIjoyNH0.bliYkwUQ62X0i52gAlk4AJkGapwZ98ygXStM9M5Qnqc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/products",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/products",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 06 Nov 2024 05:10:44 GMT"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"products\": [\n        {\n            \"ID\": 5,\n            \"Name\": \"Product B\",\n            \"Price\": 15.5,\n            \"CreatedAt\": \"2024-11-05T23:32:58.839079+01:00\",\n            \"UpdatedAt\": \"2024-11-05T23:32:58.839079+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 6,\n            \"Name\": \"Product C\",\n            \"Price\": 7.25,\n            \"CreatedAt\": \"2024-11-05T23:32:58.839079+01:00\",\n            \"UpdatedAt\": \"2024-11-05T23:32:58.839079+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 7,\n            \"Name\": \"Product A\",\n            \"Price\": 10,\n            \"CreatedAt\": \"2024-11-06T04:20:07.905321+01:00\",\n            \"UpdatedAt\": \"2024-11-06T04:20:07.905321+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 8,\n            \"Name\": \"Product B\",\n            \"Price\": 15.5,\n            \"CreatedAt\": \"2024-11-06T04:20:07.905321+01:00\",\n            \"UpdatedAt\": \"2024-11-06T04:20:07.905321+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 9,\n            \"Name\": \"Product C\",\n            \"Price\": 7.25,\n            \"CreatedAt\": \"2024-11-06T04:20:07.905321+01:00\",\n            \"UpdatedAt\": \"2024-11-06T04:20:07.905321+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 10,\n            \"Name\": \"Product A\",\n            \"Price\": 10,\n            \"CreatedAt\": \"2024-11-06T04:29:10.734535+01:00\",\n            \"UpdatedAt\": \"2024-11-06T04:29:10.734535+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 11,\n            \"Name\": \"Product B\",\n            \"Price\": 15.5,\n            \"CreatedAt\": \"2024-11-06T04:29:10.734535+01:00\",\n            \"UpdatedAt\": \"2024-11-06T04:29:10.734535+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 12,\n            \"Name\": \"Product C\",\n            \"Price\": 7.25,\n            \"CreatedAt\": \"2024-11-06T04:29:10.734535+01:00\",\n            \"UpdatedAt\": \"2024-11-06T04:29:10.734535+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 13,\n            \"Name\": \"Product A\",\n            \"Price\": 10,\n            \"CreatedAt\": \"2024-11-06T04:59:11.696232+01:00\",\n            \"UpdatedAt\": \"2024-11-06T04:59:11.696232+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 14,\n            \"Name\": \"Product B\",\n            \"Price\": 15.5,\n            \"CreatedAt\": \"2024-11-06T04:59:11.696232+01:00\",\n            \"UpdatedAt\": \"2024-11-06T04:59:11.696232+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 15,\n            \"Name\": \"Product C\",\n            \"Price\": 7.25,\n            \"CreatedAt\": \"2024-11-06T04:59:11.696232+01:00\",\n            \"UpdatedAt\": \"2024-11-06T04:59:11.696232+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 16,\n            \"Name\": \"Product A\",\n            \"Price\": 10,\n            \"CreatedAt\": \"2024-11-06T05:03:30.944049+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:03:30.944049+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 17,\n            \"Name\": \"Product B\",\n            \"Price\": 15.5,\n            \"CreatedAt\": \"2024-11-06T05:03:30.944049+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:03:30.944049+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 18,\n            \"Name\": \"Product C\",\n            \"Price\": 7.25,\n            \"CreatedAt\": \"2024-11-06T05:03:30.944049+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:03:30.944049+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 19,\n            \"Name\": \"Product A\",\n            \"Price\": 10,\n            \"CreatedAt\": \"2024-11-06T05:04:23.177349+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:04:23.177349+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 20,\n            \"Name\": \"Product B\",\n            \"Price\": 15.5,\n            \"CreatedAt\": \"2024-11-06T05:04:23.177349+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:04:23.177349+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 21,\n            \"Name\": \"Product C\",\n            \"Price\": 7.25,\n            \"CreatedAt\": \"2024-11-06T05:04:23.177349+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:04:23.177349+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 22,\n            \"Name\": \"Product A\",\n            \"Price\": 10,\n            \"CreatedAt\": \"2024-11-06T05:05:05.085706+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:05:05.085706+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 23,\n            \"Name\": \"Product B\",\n            \"Price\": 15.5,\n            \"CreatedAt\": \"2024-11-06T05:05:05.085706+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:05:05.085706+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 24,\n            \"Name\": \"Product C\",\n            \"Price\": 7.25,\n            \"CreatedAt\": \"2024-11-06T05:05:05.085706+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:05:05.085706+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 25,\n            \"Name\": \"Product A\",\n            \"Price\": 10,\n            \"CreatedAt\": \"2024-11-06T05:07:57.63507+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:07:57.63507+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 26,\n            \"Name\": \"Product B\",\n            \"Price\": 15.5,\n            \"CreatedAt\": \"2024-11-06T05:07:57.63507+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:07:57.63507+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 27,\n            \"Name\": \"Product C\",\n            \"Price\": 7.25,\n            \"CreatedAt\": \"2024-11-06T05:07:57.63507+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:07:57.63507+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 28,\n            \"Name\": \"Product A\",\n            \"Price\": 10,\n            \"CreatedAt\": \"2024-11-06T05:09:44.900241+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:09:44.900241+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 29,\n            \"Name\": \"Product B\",\n            \"Price\": 15.5,\n            \"CreatedAt\": \"2024-11-06T05:09:44.900241+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:09:44.900241+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 30,\n            \"Name\": \"Product C\",\n            \"Price\": 7.25,\n            \"CreatedAt\": \"2024-11-06T05:09:44.900241+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:09:44.900241+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 31,\n            \"Name\": \"Product A\",\n            \"Price\": 10,\n            \"CreatedAt\": \"2024-11-06T05:14:33.7999+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:14:33.7999+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 32,\n            \"Name\": \"Product B\",\n            \"Price\": 15.5,\n            \"CreatedAt\": \"2024-11-06T05:14:33.7999+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:14:33.7999+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 33,\n            \"Name\": \"Product C\",\n            \"Price\": 7.25,\n            \"CreatedAt\": \"2024-11-06T05:14:33.7999+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:14:33.7999+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 34,\n            \"Name\": \"Product A\",\n            \"Price\": 10,\n            \"CreatedAt\": \"2024-11-06T05:22:05.393151+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:22:05.393151+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 35,\n            \"Name\": \"Product B\",\n            \"Price\": 15.5,\n            \"CreatedAt\": \"2024-11-06T05:22:05.393151+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:22:05.393151+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 36,\n            \"Name\": \"Product C\",\n            \"Price\": 7.25,\n            \"CreatedAt\": \"2024-11-06T05:22:05.393151+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:22:05.393151+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 37,\n            \"Name\": \"Product A\",\n            \"Price\": 10,\n            \"CreatedAt\": \"2024-11-06T05:36:54.168261+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:36:54.168261+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 38,\n            \"Name\": \"Product B\",\n            \"Price\": 15.5,\n            \"CreatedAt\": \"2024-11-06T05:36:54.168261+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:36:54.168261+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 39,\n            \"Name\": \"Product C\",\n            \"Price\": 7.25,\n            \"CreatedAt\": \"2024-11-06T05:36:54.168261+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:36:54.168261+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 40,\n            \"Name\": \"Product A\",\n            \"Price\": 10,\n            \"CreatedAt\": \"2024-11-06T05:38:20.102472+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:38:20.102472+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 41,\n            \"Name\": \"Product B\",\n            \"Price\": 15.5,\n            \"CreatedAt\": \"2024-11-06T05:38:20.102472+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:38:20.102472+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 42,\n            \"Name\": \"Product C\",\n            \"Price\": 7.25,\n            \"CreatedAt\": \"2024-11-06T05:38:20.102472+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:38:20.102472+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 43,\n            \"Name\": \"Product A\",\n            \"Price\": 10,\n            \"CreatedAt\": \"2024-11-06T05:53:17.903597+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:53:17.903597+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 44,\n            \"Name\": \"Product B\",\n            \"Price\": 15.5,\n            \"CreatedAt\": \"2024-11-06T05:53:17.903597+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:53:17.903597+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 45,\n            \"Name\": \"Product C\",\n            \"Price\": 7.25,\n            \"CreatedAt\": \"2024-11-06T05:53:17.903597+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:53:17.903597+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 46,\n            \"Name\": \"Product A\",\n            \"Price\": 10,\n            \"CreatedAt\": \"2024-11-06T05:55:32.236606+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:55:32.236606+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 47,\n            \"Name\": \"Product B\",\n            \"Price\": 15.5,\n            \"CreatedAt\": \"2024-11-06T05:55:32.236606+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:55:32.236606+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 48,\n            \"Name\": \"Product C\",\n            \"Price\": 7.25,\n            \"CreatedAt\": \"2024-11-06T05:55:32.236606+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:55:32.236606+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 49,\n            \"Name\": \"Product A\",\n            \"Price\": 10,\n            \"CreatedAt\": \"2024-11-06T05:56:06.23445+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:56:06.23445+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 50,\n            \"Name\": \"Product B\",\n            \"Price\": 15.5,\n            \"CreatedAt\": \"2024-11-06T05:56:06.23445+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:56:06.23445+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 51,\n            \"Name\": \"Product C\",\n            \"Price\": 7.25,\n            \"CreatedAt\": \"2024-11-06T05:56:06.23445+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:56:06.23445+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 52,\n            \"Name\": \"Product A\",\n            \"Price\": 10,\n            \"CreatedAt\": \"2024-11-06T05:58:34.765747+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:58:34.765747+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 53,\n            \"Name\": \"Product B\",\n            \"Price\": 15.5,\n            \"CreatedAt\": \"2024-11-06T05:58:34.765747+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:58:34.765747+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 54,\n            \"Name\": \"Product C\",\n            \"Price\": 7.25,\n            \"CreatedAt\": \"2024-11-06T05:58:34.765747+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:58:34.765747+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 3,\n            \"Name\": \"Product A\",\n            \"Price\": 10,\n            \"CreatedAt\": \"0001-01-01T00:13:35+00:13\",\n            \"UpdatedAt\": \"2024-11-06T05:58:39.035013+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 55,\n            \"Name\": \"Product A\",\n            \"Price\": 10,\n            \"CreatedAt\": \"2024-11-06T06:01:09.747331+01:00\",\n            \"UpdatedAt\": \"2024-11-06T06:01:09.747331+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 56,\n            \"Name\": \"Product A\",\n            \"Price\": 10,\n            \"CreatedAt\": \"2024-11-06T06:01:16.210744+01:00\",\n            \"UpdatedAt\": \"2024-11-06T06:01:16.210744+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 57,\n            \"Name\": \"Product A\",\n            \"Price\": 10,\n            \"CreatedAt\": \"2024-11-06T06:01:17.083909+01:00\",\n            \"UpdatedAt\": \"2024-11-06T06:01:17.083909+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 58,\n            \"Name\": \"Product A\",\n            \"Price\": 10,\n            \"CreatedAt\": \"2024-11-06T06:07:21.036692+01:00\",\n            \"UpdatedAt\": \"2024-11-06T06:07:21.036692+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 59,\n            \"Name\": \"\",\n            \"Price\": 0,\n            \"CreatedAt\": \"2024-11-06T06:07:52.174552+01:00\",\n            \"UpdatedAt\": \"2024-11-06T06:07:52.174552+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 4,\n            \"Name\": \"Product A\",\n            \"Price\": 10,\n            \"CreatedAt\": \"2024-11-05T23:32:58.839079+01:00\",\n            \"UpdatedAt\": \"2024-11-06T06:09:38.650254+01:00\",\n            \"DeletedAt\": null\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Prod",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MzA5NTQwMTksImlzX2FkbWluIjp0cnVlLCJ1c2VyX2lkIjoyNH0.bliYkwUQ62X0i52gAlk4AJkGapwZ98ygXStM9M5Qnqc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/admin/products/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"products",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Prod",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/admin/products/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"products",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 06 Nov 2024 05:11:49 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "85"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Product deleted successfully\",\n    \"response\": {\n        \"product_id\": 2\n    },\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Order Status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MzA5NTQwMTksImlzX2FkbWluIjp0cnVlLCJ1c2VyX2lkIjoyNH0.bliYkwUQ62X0i52gAlk4AJkGapwZ98ygXStM9M5Qnqc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"status\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/admin/orders/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"orders",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Order Status",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"status\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/admin/orders/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"orders",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 06 Nov 2024 05:24:57 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "88"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Order status updated successfully\",\n    \"response\": {\n        \"order_id\": 1\n    },\n    \"success\": true\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Place Order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MzA5NTQwMTksImlzX2FkbWluIjp0cnVlLCJ1c2VyX2lkIjoyNH0.bliYkwUQ62X0i52gAlk4AJkGapwZ98ygXStM9M5Qnqc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"product_ids\": [11, 2, 32]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/orders",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Place Order",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"product_ids\": [11, 32]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/orders",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"orders"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 06 Nov 2024 05:26:51 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "81"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Order placed successfully\",\n    \"response\": {\n        \"order_id\": 35\n    },\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Orders by UserId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MzA5NTQwMTksImlzX2FkbWluIjp0cnVlLCJ1c2VyX2lkIjoyNH0.bliYkwUQ62X0i52gAlk4AJkGapwZ98ygXStM9M5Qnqc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/orders/user",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"orders",
+								"user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Orders by UserId",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/orders/user",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"orders",
+										"user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 06 Nov 2024 05:27:52 GMT"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"orders\": [\n        {\n            \"ID\": 11,\n            \"UserID\": 24,\n            \"User\": {\n                \"ID\": 0,\n                \"Email\": \"\",\n                \"Password\": \"\",\n                \"IsAdmin\": false,\n                \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n                \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n                \"DeletedAt\": null\n            },\n            \"Products\": [\n                {\n                    \"ID\": 3,\n                    \"Name\": \"Product A\",\n                    \"Price\": 10,\n                    \"CreatedAt\": \"0001-01-01T00:13:35+00:13\",\n                    \"UpdatedAt\": \"2024-11-06T05:58:39.035013+01:00\",\n                    \"DeletedAt\": null\n                }\n            ],\n            \"Status\": 0,\n            \"CreatedAt\": \"2024-11-06T05:10:27.160038+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:10:27.160038+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 13,\n            \"UserID\": 24,\n            \"User\": {\n                \"ID\": 0,\n                \"Email\": \"\",\n                \"Password\": \"\",\n                \"IsAdmin\": false,\n                \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n                \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n                \"DeletedAt\": null\n            },\n            \"Products\": [\n                {\n                    \"ID\": 3,\n                    \"Name\": \"Product A\",\n                    \"Price\": 10,\n                    \"CreatedAt\": \"0001-01-01T00:13:35+00:13\",\n                    \"UpdatedAt\": \"2024-11-06T05:58:39.035013+01:00\",\n                    \"DeletedAt\": null\n                }\n            ],\n            \"Status\": 0,\n            \"CreatedAt\": \"2024-11-06T05:14:36.70953+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:14:36.70953+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 15,\n            \"UserID\": 24,\n            \"User\": {\n                \"ID\": 0,\n                \"Email\": \"\",\n                \"Password\": \"\",\n                \"IsAdmin\": false,\n                \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n                \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n                \"DeletedAt\": null\n            },\n            \"Products\": [\n                {\n                    \"ID\": 3,\n                    \"Name\": \"Product A\",\n                    \"Price\": 10,\n                    \"CreatedAt\": \"0001-01-01T00:13:35+00:13\",\n                    \"UpdatedAt\": \"2024-11-06T05:58:39.035013+01:00\",\n                    \"DeletedAt\": null\n                }\n            ],\n            \"Status\": 0,\n            \"CreatedAt\": \"2024-11-06T05:22:10.354779+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:22:10.354779+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 16,\n            \"UserID\": 24,\n            \"User\": {\n                \"ID\": 0,\n                \"Email\": \"\",\n                \"Password\": \"\",\n                \"IsAdmin\": false,\n                \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n                \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n                \"DeletedAt\": null\n            },\n            \"Products\": [\n                {\n                    \"ID\": 3,\n                    \"Name\": \"Product A\",\n                    \"Price\": 10,\n                    \"CreatedAt\": \"0001-01-01T00:13:35+00:13\",\n                    \"UpdatedAt\": \"2024-11-06T05:58:39.035013+01:00\",\n                    \"DeletedAt\": null\n                }\n            ],\n            \"Status\": 0,\n            \"CreatedAt\": \"2024-11-06T05:22:11.145228+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:22:11.145228+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 17,\n            \"UserID\": 24,\n            \"User\": {\n                \"ID\": 0,\n                \"Email\": \"\",\n                \"Password\": \"\",\n                \"IsAdmin\": false,\n                \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n                \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n                \"DeletedAt\": null\n            },\n            \"Products\": [\n                {\n                    \"ID\": 3,\n                    \"Name\": \"Product A\",\n                    \"Price\": 10,\n                    \"CreatedAt\": \"0001-01-01T00:13:35+00:13\",\n                    \"UpdatedAt\": \"2024-11-06T05:58:39.035013+01:00\",\n                    \"DeletedAt\": null\n                }\n            ],\n            \"Status\": 0,\n            \"CreatedAt\": \"2024-11-06T05:22:13.274097+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:22:13.274097+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 18,\n            \"UserID\": 24,\n            \"User\": {\n                \"ID\": 0,\n                \"Email\": \"\",\n                \"Password\": \"\",\n                \"IsAdmin\": false,\n                \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n                \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n                \"DeletedAt\": null\n            },\n            \"Products\": [\n                {\n                    \"ID\": 32,\n                    \"Name\": \"Product B\",\n                    \"Price\": 15.5,\n                    \"CreatedAt\": \"2024-11-06T05:14:33.7999+01:00\",\n                    \"UpdatedAt\": \"2024-11-06T05:14:33.7999+01:00\",\n                    \"DeletedAt\": null\n                }\n            ],\n            \"Status\": 0,\n            \"CreatedAt\": \"2024-11-06T05:22:23.386175+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:22:23.386175+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 19,\n            \"UserID\": 24,\n            \"User\": {\n                \"ID\": 0,\n                \"Email\": \"\",\n                \"Password\": \"\",\n                \"IsAdmin\": false,\n                \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n                \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n                \"DeletedAt\": null\n            },\n            \"Products\": [\n                {\n                    \"ID\": 32,\n                    \"Name\": \"Product B\",\n                    \"Price\": 15.5,\n                    \"CreatedAt\": \"2024-11-06T05:14:33.7999+01:00\",\n                    \"UpdatedAt\": \"2024-11-06T05:14:33.7999+01:00\",\n                    \"DeletedAt\": null\n                }\n            ],\n            \"Status\": 0,\n            \"CreatedAt\": \"2024-11-06T05:22:25.323292+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:22:25.323292+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 20,\n            \"UserID\": 24,\n            \"User\": {\n                \"ID\": 0,\n                \"Email\": \"\",\n                \"Password\": \"\",\n                \"IsAdmin\": false,\n                \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n                \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n                \"DeletedAt\": null\n            },\n            \"Products\": [\n                {\n                    \"ID\": 32,\n                    \"Name\": \"Product B\",\n                    \"Price\": 15.5,\n                    \"CreatedAt\": \"2024-11-06T05:14:33.7999+01:00\",\n                    \"UpdatedAt\": \"2024-11-06T05:14:33.7999+01:00\",\n                    \"DeletedAt\": null\n                }\n            ],\n            \"Status\": 0,\n            \"CreatedAt\": \"2024-11-06T05:22:27.400299+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:22:27.400299+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 21,\n            \"UserID\": 24,\n            \"User\": {\n                \"ID\": 0,\n                \"Email\": \"\",\n                \"Password\": \"\",\n                \"IsAdmin\": false,\n                \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n                \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n                \"DeletedAt\": null\n            },\n            \"Products\": [\n                {\n                    \"ID\": 32,\n                    \"Name\": \"Product B\",\n                    \"Price\": 15.5,\n                    \"CreatedAt\": \"2024-11-06T05:14:33.7999+01:00\",\n                    \"UpdatedAt\": \"2024-11-06T05:14:33.7999+01:00\",\n                    \"DeletedAt\": null\n                }\n            ],\n            \"Status\": 0,\n            \"CreatedAt\": \"2024-11-06T05:22:39.719566+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:22:39.719566+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 22,\n            \"UserID\": 24,\n            \"User\": {\n                \"ID\": 0,\n                \"Email\": \"\",\n                \"Password\": \"\",\n                \"IsAdmin\": false,\n                \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n                \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n                \"DeletedAt\": null\n            },\n            \"Products\": [\n                {\n                    \"ID\": 11,\n                    \"Name\": \"Product B\",\n                    \"Price\": 15.5,\n                    \"CreatedAt\": \"2024-11-06T04:29:10.734535+01:00\",\n                    \"UpdatedAt\": \"2024-11-06T04:29:10.734535+01:00\",\n                    \"DeletedAt\": null\n                },\n                {\n                    \"ID\": 32,\n                    \"Name\": \"Product B\",\n                    \"Price\": 15.5,\n                    \"CreatedAt\": \"2024-11-06T05:14:33.7999+01:00\",\n                    \"UpdatedAt\": \"2024-11-06T05:14:33.7999+01:00\",\n                    \"DeletedAt\": null\n                }\n            ],\n            \"Status\": 0,\n            \"CreatedAt\": \"2024-11-06T05:22:51.399051+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:22:51.399051+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 23,\n            \"UserID\": 24,\n            \"User\": {\n                \"ID\": 0,\n                \"Email\": \"\",\n                \"Password\": \"\",\n                \"IsAdmin\": false,\n                \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n                \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n                \"DeletedAt\": null\n            },\n            \"Products\": [\n                {\n                    \"ID\": 11,\n                    \"Name\": \"Product B\",\n                    \"Price\": 15.5,\n                    \"CreatedAt\": \"2024-11-06T04:29:10.734535+01:00\",\n                    \"UpdatedAt\": \"2024-11-06T04:29:10.734535+01:00\",\n                    \"DeletedAt\": null\n                },\n                {\n                    \"ID\": 32,\n                    \"Name\": \"Product B\",\n                    \"Price\": 15.5,\n                    \"CreatedAt\": \"2024-11-06T05:14:33.7999+01:00\",\n                    \"UpdatedAt\": \"2024-11-06T05:14:33.7999+01:00\",\n                    \"DeletedAt\": null\n                }\n            ],\n            \"Status\": 0,\n            \"CreatedAt\": \"2024-11-06T05:22:52.393321+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:22:52.393321+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 24,\n            \"UserID\": 24,\n            \"User\": {\n                \"ID\": 0,\n                \"Email\": \"\",\n                \"Password\": \"\",\n                \"IsAdmin\": false,\n                \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n                \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n                \"DeletedAt\": null\n            },\n            \"Products\": [\n                {\n                    \"ID\": 11,\n                    \"Name\": \"Product B\",\n                    \"Price\": 15.5,\n                    \"CreatedAt\": \"2024-11-06T04:29:10.734535+01:00\",\n                    \"UpdatedAt\": \"2024-11-06T04:29:10.734535+01:00\",\n                    \"DeletedAt\": null\n                },\n                {\n                    \"ID\": 32,\n                    \"Name\": \"Product B\",\n                    \"Price\": 15.5,\n                    \"CreatedAt\": \"2024-11-06T05:14:33.7999+01:00\",\n                    \"UpdatedAt\": \"2024-11-06T05:14:33.7999+01:00\",\n                    \"DeletedAt\": null\n                }\n            ],\n            \"Status\": 0,\n            \"CreatedAt\": \"2024-11-06T05:22:52.962665+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:22:52.962665+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 25,\n            \"UserID\": 24,\n            \"User\": {\n                \"ID\": 0,\n                \"Email\": \"\",\n                \"Password\": \"\",\n                \"IsAdmin\": false,\n                \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n                \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n                \"DeletedAt\": null\n            },\n            \"Products\": [\n                {\n                    \"ID\": 11,\n                    \"Name\": \"Product B\",\n                    \"Price\": 15.5,\n                    \"CreatedAt\": \"2024-11-06T04:29:10.734535+01:00\",\n                    \"UpdatedAt\": \"2024-11-06T04:29:10.734535+01:00\",\n                    \"DeletedAt\": null\n                },\n                {\n                    \"ID\": 32,\n                    \"Name\": \"Product B\",\n                    \"Price\": 15.5,\n                    \"CreatedAt\": \"2024-11-06T05:14:33.7999+01:00\",\n                    \"UpdatedAt\": \"2024-11-06T05:14:33.7999+01:00\",\n                    \"DeletedAt\": null\n                }\n            ],\n            \"Status\": 0,\n            \"CreatedAt\": \"2024-11-06T05:22:55.025258+01:00\",\n            \"UpdatedAt\": \"2024-11-06T05:22:55.025258+01:00\",\n            \"DeletedAt\": null\n        },\n        {\n            \"ID\": 35,\n            \"UserID\": 24,\n            \"User\": {\n                \"ID\": 0,\n                \"Email\": \"\",\n                \"Password\": \"\",\n                \"IsAdmin\": false,\n                \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n                \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n                \"DeletedAt\": null\n            },\n            \"Products\": [\n                {\n                    \"ID\": 11,\n                    \"Name\": \"Product B\",\n                    \"Price\": 15.5,\n                    \"CreatedAt\": \"2024-11-06T04:29:10.734535+01:00\",\n                    \"UpdatedAt\": \"2024-11-06T04:29:10.734535+01:00\",\n                    \"DeletedAt\": null\n                },\n                {\n                    \"ID\": 32,\n                    \"Name\": \"Product B\",\n                    \"Price\": 15.5,\n                    \"CreatedAt\": \"2024-11-06T05:14:33.7999+01:00\",\n                    \"UpdatedAt\": \"2024-11-06T05:14:33.7999+01:00\",\n                    \"DeletedAt\": null\n                }\n            ],\n            \"Status\": 0,\n            \"CreatedAt\": \"2024-11-06T06:26:51.53215+01:00\",\n            \"UpdatedAt\": \"2024-11-06T06:26:51.53215+01:00\",\n            \"DeletedAt\": null\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Cancel Order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MzA5NTQwMTksImlzX2FkbWluIjp0cnVlLCJ1c2VyX2lkIjoyNH0.bliYkwUQ62X0i52gAlk4AJkGapwZ98ygXStM9M5Qnqc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/orders/36",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"orders",
+								"36"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Cancel Order",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/orders/35",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"orders",
+										"35"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 06 Nov 2024 06:01:12 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "53"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"message\": \"Order already cancelled\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"user12@example.com\",\n  \"password\": \"password1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Error- duplicate error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"user12@example.com\",\n  \"password\": \"password1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 06 Nov 2024 06:20:18 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "103"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"message\": \"User registration failed\",\n    \"response\": \"User with this email already exists\"\n}"
+				},
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"user@example.com\",\n  \"password\": \"password1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 06 Nov 2024 06:20:39 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "105"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"User registered successfully\",\n    \"response\": {\n        \"id\": 49,\n        \"email\": \"user@example.com\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"user12@example.com\",\n  \"password\": \"password1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"user12@example.com\",\n  \"password\": \"password1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 06 Nov 2024 05:05:42 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "210"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"User login successfully\",\n    \"response\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MzA5NTU5NDIsImlzX2FkbWluIjp0cnVlLCJ1c2VyX2lkIjoyNH0.YGaPygPSJh9A3WxQWaJOtBWb6fuLi-90sH2htsug8yo\",\n    \"success\": true\n}"
+				}
+			]
+		}
+	]
+}
